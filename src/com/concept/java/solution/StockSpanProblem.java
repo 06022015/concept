@@ -16,40 +16,37 @@ package com.concept.java.solution;
 * */
 
 public class StockSpanProblem {
-    
-    public int[] getSpan(int stock[]){
+
+    public int[] getSpan(int stock[]) {
         int span[] = new int[stock.length];
-        for(int index=0;index<stock.length;index++){
-            int sum = 1;
-            if(index>=0){
-                for(int j=index-1;j>=0;j--){
-                    if(stock[index]>stock[j]){
-                        sum++;
-                    }else
-                        break;
-                }
+        for (int index = 0; index < stock.length; index++) {
+            span[index] = 1;
+            for (int j = index - 1; j >= 0; j--) {
+                if (stock[index] > stock[j]) {
+                    span[index]++;
+                } else
+                    break;
             }
-            span[index]=sum;
         }
         return span;
     }
 
-    public void printData(int input[]){
-        for (int anInput : input) 
+    public void printArray(int input[]) {
+        for (int anInput : input)
             System.out.print(anInput + "  ");
         System.out.println();
     }
-    
-    public static void main(String args[]){
+
+    public static void main(String args[]) {
         StockSpanProblem stockSpanProblem = new StockSpanProblem();
         System.out.println("Test Case:-1");
-        int stock[] = {100,80,60,70,60,75,85};
-        stockSpanProblem.printData(stockSpanProblem.getSpan(stock));
+        int stock[] = {100, 80, 60, 70, 60, 75, 85};
+        stockSpanProblem.printArray(stockSpanProblem.getSpan(stock));
 
         System.out.println("Test Case:-2");
-        int stock1[] = {10,4,5,90,120,80};
-        stockSpanProblem.printData(stockSpanProblem.getSpan(stock1));
+        int stock1[] = {10, 4, 5, 90, 120, 80};
+        stockSpanProblem.printArray(stockSpanProblem.getSpan(stock1));
     }
-    
-    
+
+
 }
