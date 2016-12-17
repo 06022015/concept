@@ -22,9 +22,9 @@ public class StockSpanProblem {
         for (int index = 0; index < stock.length; index++) {
             span[index] = 1;
             for (int j = index - 1; j >= 0; j--) {
-                if (stock[index] > stock[j]) {
+                if (stock[index] > stock[j])
                     span[index]++;
-                } else
+                else
                     break;
             }
         }
