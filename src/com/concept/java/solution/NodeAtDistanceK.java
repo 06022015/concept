@@ -65,7 +65,7 @@ public class NodeAtDistanceK extends Base{
         root.left.right.left = new Node(10);
         root.left.right.right = new Node(14);
         Node target = root.left;
-        FindNodeAtDistanceK findNodeAtDistanceK = new FindNodeAtDistanceK();
-        findNodeAtDistanceK.printDistanceNode(root, target, 2);
+        NodeAtDistanceK nodeAtDistanceK = new NodeAtDistanceK();
+        nodeAtDistanceK.printDistanceNode(root, target, 2);
     }
 }
