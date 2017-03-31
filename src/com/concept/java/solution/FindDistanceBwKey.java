@@ -51,5 +51,9 @@ public class FindDistanceBwKey extends Base {
         root.right.left.right = new Node(8);
         FindDistanceBwKey findDistanceBwKey = new FindDistanceBwKey();
         System.out.println("Key 4,5: - "+ findDistanceBwKey.findDistance(root, 4,5));
+        System.out.println("Key 4,6: - "+ findDistanceBwKey.findDistance(root, 4,6));
+        System.out.println("Key 3,4: - "+ findDistanceBwKey.findDistance(root, 3,4));
+        System.out.println("Key 2,4: - "+ findDistanceBwKey.findDistance(root, 2,4));
+        System.out.println("Key 8,5: - "+ findDistanceBwKey.findDistance(root, 8,5));
     }
 }
