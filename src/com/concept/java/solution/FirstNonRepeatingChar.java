@@ -9,6 +9,12 @@ import java.util.*;
  * Time: 10:57 PM
  * To change this template use File | Settings | File Templates.
  */
+/*
+* Java Program to find first duplicate, non-repeated character in a String. * It demonstrate three simple example to do this programming problem. *
+* Read more: http://javarevisited.blogspot.com/2014/03/3-ways-to-find-first-non-repeated-character-String-programming-problem.html#ixzz4d4m1nSqb
+
+* */
+
 public class FirstNonRepeatingChar {
     
     public Character findFirstNonRepeatingChar(String stream){

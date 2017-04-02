@@ -16,6 +16,15 @@ public class Base {
         System.out.println();
     }
 
+    public void printArray(int input[][]) {
+        for(int row[] : input){
+            for(int col : row){
+                System.out.print(col+"\t");
+            }
+            System.out.println();
+        }
+    }
+
 
     static class Node{
         public int value;
