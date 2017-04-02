@@ -16,5 +16,9 @@ public interface Stack<T> {
     int size();
 
     void display();
+    
+    T top();
+
+    Boolean isEmpty();
 
 }

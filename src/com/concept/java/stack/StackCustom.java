@@ -50,4 +50,17 @@ public class StackCustom<T> implements Stack<T>{
             System.out.println(this.data[i].toString());
         }
     }
+
+    @Override
+    public T top() {
+        if(this.size>0){
+            return (T)this.data[this.size-1];
+        }
+        return null;
+    }
+
+    @Override
+    public Boolean isEmpty() {
+        return this.size>0;
+    }
 }
