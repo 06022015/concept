@@ -25,6 +25,37 @@ public class Base {
         }
     }
 
+    protected void printTree(Node root){
+        if(null == root)
+            return;
+        System.out.print(root.value);
+        printTree(root.left);
+        printTree(root.right);
+    }
+    
+    protected void printPreOrder(Node root){
+        if(null==root)
+            return;
+        System.out.print(root.value);
+        printPreOrder(root.left);
+        printPreOrder(root.right);
+    }
+
+    protected void printInOrder(Node root){
+        if(null==root)
+            return;
+        printPreOrder(root.left);
+        System.out.print(root.value);
+        printPreOrder(root.right);
+    }
+
+    protected void printPostOrder(Node root){
+        if(null==root)
+            return;
+        printPreOrder(root.left);
+        printPreOrder(root.right);
+        System.out.print(root.value);
+    }
 
     static class Node{
         public int value;
@@ -35,5 +66,17 @@ public class Base {
             this.value = value;
             this.left = this.right = null;
         }
+    }
+    
+    protected Node getBinaryTree(){
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+        root.left.left.left = new Node(8);
+        return root;
     }
 }
