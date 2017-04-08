@@ -14,6 +14,7 @@ public class HeapSort extends Sort {
         for (int i = input.length - 1; i >= 0; i--) {
             swap(input, 0, i);
             maxHeap(input, 0, i);
+            //minHeap(input, 0, i);
         }
         return input;
     }
@@ -21,6 +22,7 @@ public class HeapSort extends Sort {
     private void heapify(int input[]) {
         for (int i = input.length / 2; i >= 0; i--)
             maxHeap(input, i, input.length);
+            //minHeap(input, i, input.length);
     }
 
     private void maxHeap(int input[], int currentIndex, int length) {
@@ -34,6 +36,20 @@ public class HeapSort extends Sort {
         if (max != currentIndex) {
             swap(input, currentIndex, max);
             maxHeap(input, max, length);
+        }
+    }
+
+    private void minHeap(int input[], int currentIndex, int length) {
+        int left = 2 * currentIndex;
+        int right = 2 * currentIndex + 1;
+        int min = currentIndex;
+        if (left < length && input[left] < input[min])
+            min = left;
+        if (right < length && input[right] < input[min])
+            min = right;
+        if (min != currentIndex) {
+            swap(input, currentIndex, min);
+            minHeap(input, min, length);
         }
     }
 }
