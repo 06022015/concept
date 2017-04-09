@@ -36,7 +36,7 @@ public class Base {
     protected void printPreOrder(Node root){
         if(null==root)
             return;
-        System.out.print(root.value);
+        System.out.print(root.value+"\t");
         printPreOrder(root.left);
         printPreOrder(root.right);
     }
@@ -44,17 +44,17 @@ public class Base {
     protected void printInOrder(Node root){
         if(null==root)
             return;
-        printPreOrder(root.left);
-        System.out.print(root.value);
-        printPreOrder(root.right);
+        printInOrder(root.left);
+        System.out.print(root.value+"\t");
+        printInOrder(root.right);
     }
 
     protected void printPostOrder(Node root){
         if(null==root)
             return;
-        printPreOrder(root.left);
-        printPreOrder(root.right);
-        System.out.print(root.value);
+        printPostOrder(root.left);
+        printPostOrder(root.right);
+        System.out.print(root.value+"\t");
     }
 
     static class Node{
