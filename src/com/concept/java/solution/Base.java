@@ -61,10 +61,24 @@ public class Base {
         public int value;
         public Node left;
         public Node right;
+        public Node next;
+        public Node prev;
 
         Node(int value) {
             this.value = value;
             this.left = this.right = null;
+            this.next = this.prev = null;
+        }
+    }
+
+    static class CharNode{
+        public char value;
+        public CharNode next;
+        public CharNode prev;
+
+        CharNode(char value) {
+            this.value = value;
+            this.next = this.prev = null;
         }
     }
     
