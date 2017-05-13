@@ -57,14 +57,14 @@ public class Base {
         System.out.print(root.value+"\t");
     }
 
-    static class Node{
+    public static class Node{
         public int value;
         public Node left;
         public Node right;
         public Node next;
         public Node prev;
 
-        Node(int value) {
+        public Node(int value) {
             this.value = value;
             this.left = this.right = null;
             this.next = this.prev = null;
