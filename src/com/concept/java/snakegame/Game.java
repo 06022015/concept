@@ -28,15 +28,19 @@ public abstract  class Game{
     
     private void init(int rowCount, int columnCount, Score score){
         this.board = new Board(rowCount, columnCount);
-        this.snake = new Snake(getSnakeInitialPosition());
+        this.snake = new Snake(getSnakeInitialPosition(5));
         this.status = GameStatus.NEW;
         this.score = score;
     }
     
-    private Cell[] getSnakeInitialPosition(){
+    private Cell[] getSnakeInitialPosition(int length){
+        Cell cells[] = new Cell[length];
+        Cell cell = this.board.getEmptyCell();
+        cells[0] =  cell;
+        for(int i =1; i< length;i++){
 
-        return null;
-
+        }
+        return cells;
     }
 
     public void play(){

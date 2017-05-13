@@ -54,4 +54,11 @@ public class Board {
     public Cell getCell(int row, int column){
         return this.cells[row][column];
     }
+    
+    public Cell getEmptyCell(){
+        int row = (int) (Math.random() * rowCount);
+        int column = (int) (Math.random() * columnCount);
+        Cell cell = this.cells[row][column];
+        return cell.getCellType().equals(CellType.EMPTY)?cell: getEmptyCell();
+    }
 }
