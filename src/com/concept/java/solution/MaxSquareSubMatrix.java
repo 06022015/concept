@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -7,7 +9,7 @@ package com.concept.java.solution;
  * Time: 10:59 PM
  * To change this template use File | Settings | File Templates.
  */
-public class MaxSquareSubMatrix extends Base{
+public class MaxSquareSubMatrix extends Base {
 
     public int maxSubMatrix(int matrix[][]){
         int maxSize = 0;

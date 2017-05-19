@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures

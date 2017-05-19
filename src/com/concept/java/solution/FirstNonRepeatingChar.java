@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 import java.util.*;
 
 /**
@@ -15,7 +17,7 @@ import java.util.*;
 
 * */
 
-public class FirstNonRepeatingChar extends Base{
+public class FirstNonRepeatingChar extends Base {
     
     public Character findFirstNonRepeatingChar(String stream){
         Map<Character,Integer> entries = new LinkedHashMap();

@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -13,7 +15,7 @@ package com.concept.java.solution;
 *
 * */
 
-public class ReverseArray extends Base{
+public class ReverseArray extends Base {
     
     public int[] reverseArray(int []input){
         int start=0, end = input.length-1;

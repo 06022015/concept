@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -14,7 +16,7 @@ package com.concept.java.solution;
 *
 * */
 
-public class FindMiddleNodeOfLinkList extends Base{
+public class FindMiddleNodeOfLinkList extends Base {
 
     public Node findMiddleNode(Node root){
         Node p1 = root;

@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -12,7 +14,7 @@ package com.concept.java.solution;
 * Search in a row wise and column wise sorted matrix
 *
 * */
-public class SearchInMatrix extends Base{
+public class SearchInMatrix extends Base {
     
 
     /*

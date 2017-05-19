@@ -1,6 +1,8 @@
 package com.concept.java.solution;
 
 
+import com.concept.java.Base;
+
 import java.util.*;
 
 /**

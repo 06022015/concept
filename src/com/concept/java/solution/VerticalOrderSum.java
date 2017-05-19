@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 import java.util.TreeMap;
 
 /**
@@ -16,7 +18,7 @@ import java.util.TreeMap;
 * */
 
 
-public class VerticalOrderSum extends Base{
+public class VerticalOrderSum extends Base {
 
     public TreeMap<Integer, Integer> sum  =new TreeMap<Integer,Integer>();
     

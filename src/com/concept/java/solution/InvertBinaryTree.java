@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -13,7 +15,7 @@ package com.concept.java.solution;
  * http://www.programcreek.com/2014/06/leetcode-invert-binary-tree-java/
  * */
 
-public class InvertBinaryTree extends Base{
+public class InvertBinaryTree extends Base {
     
     
     //Recursive

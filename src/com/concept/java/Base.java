@@ -1,4 +1,4 @@
-package com.concept.java.solution;
+package com.concept.java;
 
 /**
  * Created by IntelliJ IDEA.
@@ -71,12 +71,12 @@ public class Base {
         }
     }
 
-    static class CharNode{
+    public static class CharNode{
         public char value;
         public CharNode next;
         public CharNode prev;
 
-        CharNode(char value) {
+        public CharNode(char value) {
             this.value = value;
             this.next = this.prev = null;
         }

@@ -8,6 +8,8 @@ package com.concept.java.solution;
  * To change this template use File | Settings | File Templates.
  */
 
+import com.concept.java.Base;
+
 /**
  * Print all nodes at distance k from a given node
  * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node. No parent pointers are available.
@@ -16,7 +18,7 @@ package com.concept.java.solution;
  *
  * */
 
-public class NodeAtDistanceK extends Base{
+public class NodeAtDistanceK extends Base {
 
     public void printDistanceNodeDown(Node node, int distance){
         if(node==null || distance < 0)

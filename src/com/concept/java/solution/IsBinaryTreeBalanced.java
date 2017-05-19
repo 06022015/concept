@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -10,7 +12,7 @@ package com.concept.java.solution;
 /*
 * How to determine if a binary tree is height-balanced?
 * */
-public class IsBinaryTreeBalanced extends Base{
+public class IsBinaryTreeBalanced extends Base {
 
 
     /*

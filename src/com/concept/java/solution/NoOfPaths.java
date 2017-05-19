@@ -1,5 +1,7 @@
 package com.concept.java.solution;
 
+import com.concept.java.Base;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -19,7 +21,7 @@ package com.concept.java.solution;
 *  http://algorithms.tutorialhorizon.com/dynamic-programming-count-all-paths-in-2d-matrix-with-obstructions-in-it/
 *
 * */
-public class NoOfPaths extends Base{
+public class NoOfPaths extends Base {
     
     public int count(int matrix[][], int row, int col){
         if(row==matrix.length-1 || col==matrix.length-1)
