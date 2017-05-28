@@ -68,6 +68,17 @@ public class ReverseLinkList {
         }
         System.out.println();
     }
+
+    public Node reverseLinkList(Node head) {
+        Node result = null;
+        while(null != head){
+            Node temp = head;
+            head = head.next;
+            temp.next = result;
+            result = temp;
+        }
+        return result;
+    }
     
     public static void main(String args[]){
         Node node = new Node(8);
@@ -82,8 +93,10 @@ public class ReverseLinkList {
         Node reverse = r.reverse(node, 8);
         System.out.println("Output:- ");
         r.printList(reverse);
+        System.out.println("Reverse Output:- ");
+        r.printList(r.reverseLinkList(node));
     }
-    
+
 
      static class Node {
         public Integer value;
