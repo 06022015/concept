@@ -81,7 +81,8 @@ public class NoOfPaths extends Base {
     }
     
     public static void main(String args[]){
-        int matrix[][] = {{1,2,3},{4,5,6},{7,8,9}};
+        //int matrix[][] = {{1,2,3},{4,5,6},{7,8,9}};
+        int matrix[][] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
         NoOfPaths noOfPaths = new NoOfPaths();
         System.out.println("Recursive result:- "+noOfPaths.count(matrix,0,0));
         System.out.println("DP result:- "+noOfPaths.countDP(matrix));
