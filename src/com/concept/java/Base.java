@@ -94,6 +94,14 @@ public class Base {
         return root;
     }
 
+    public void printList(Node node){
+        while(node!=null){
+            System.out.print(node.value+"==>");
+            node = node.next;
+        }
+        System.out.println();
+    }
+
     protected void swap(int input[], int i, int j) {
         int temp = input[i];
         input[i] = input[j];
