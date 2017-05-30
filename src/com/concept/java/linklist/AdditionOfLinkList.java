@@ -1,4 +1,4 @@
-package com.concept.java.solution;
+package com.concept.java.linklist;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,9 +8,9 @@ package com.concept.java.solution;
  * To change this template use File | Settings | File Templates.
  */
 
-
 /*
-*   Add two numbers represented by linked lists | Set 1
+*   Sum of two linked lists and store the result in the third one.
+*  Add two numbers represented by linked lists | Set 1
 *   Given two numbers represented by two lists, write a function that returns sum list. The sum list is list representation of addition of two input numbers.
 * */
 public class AdditionOfLinkList {
