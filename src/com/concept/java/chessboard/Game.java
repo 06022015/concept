@@ -7,45 +7,27 @@ package com.concept.java.chessboard;
  * Time: 8:58 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Game {
+public class Game implements IGame{
 
     private Board board;
     private Player white;
     private Player black;
 
-    public Game() {
+    public Game(Player white, Player black) {
         super();
-    }
-
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
+        this.white = white;
+        this.black = black;
     }
 
     public Player getWhite() {
         return white;
     }
 
-    public void setWhite(Player white) {
-        this.white = white;
-    }
-
     public Player getBlack() {
         return black;
     }
 
-    public void setBlack(Player black) {
-        this.black = black;
-    }
-
-    public void startGame(){
-        initializeGameForGivenPlayers();
-    }
-
-    public boolean initializeGameForGivenPlayers() {
+    private boolean initializeGameForGivenPlayers() {
         if (null == this.white || null == this.black) {
             return false;
         }
@@ -59,7 +41,42 @@ public class Game {
         return true;
     }
 
+    @Override
+    public void start() {
+        initializeGameForGivenPlayers();
+    }
+
+    @Override
+    public void restart() {
+        start();
+    }
+
+    @Override
+    public void pause() {
+        //TODO: logic to pause game
+    }
+
+    @Override
+    public void resume() {
+        //TODO: logic to resume game
+    }
+
+    @Override
+    public void stop() {
+        //TODO: logic to stop game
+    }
+
+    @Override
+    public void over() {
+        //TODO: logic to finish game
+    }
+
     public boolean move(Player player, Piece piece, int toX, int toY){
         return this.board.move(player,piece,piece.getX(), piece.getY(), toX,toY);
+    }
+
+    @Override
+    public Board getState() {
+        return this.board;
     }
 }
