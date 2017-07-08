@@ -9,6 +9,11 @@ package com.concept.java;
  */
 public class Base {
 
+   public int a =8;
+
+    public void printVal() {
+        System.out.print("Super");
+    }
 
     public void printArray(int input[]) {
         for (int anInput : input)
@@ -68,6 +73,13 @@ public class Base {
             this.value = value;
             this.left = this.right = null;
             this.next = this.prev = null;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    '}';
         }
     }
 
