@@ -90,11 +90,12 @@ public class LRUCache<K, V> {
                     tempNode.prev.next = tempNode.next;
                     tempNode.next.prev = tempNode.prev;
                     this.size--;
+                    break;
                 }
                 tempNode = tempNode.next;
             }
-            this.track.next = tempNode.next;
-            this.track.prev = tempNode.prev;
+            //this.track.next = tempNode.next;
+            //this.track.prev = tempNode.prev;
         }
     }
 
