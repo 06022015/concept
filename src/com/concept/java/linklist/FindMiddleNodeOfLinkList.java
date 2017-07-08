@@ -1,4 +1,4 @@
-package com.concept.java.solution;
+package com.concept.java.linklist;
 
 import com.concept.java.Base;
 
