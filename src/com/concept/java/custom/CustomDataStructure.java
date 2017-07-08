@@ -18,7 +18,7 @@ public class CustomDataStructure<K,V> {
         this.map = new HashMap<K, Integer>();
         this.values = new ArrayList<V>();
     }
-    
+
     public void add(K key, V value){
         int index =0;
         if(this.map.containsKey(key)){
