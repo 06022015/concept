@@ -18,6 +18,31 @@ package com.concept.java.solution;
 public class ReverseLinkList {
 
 
+    /*
+    * O(k)
+    * */
+    public Node reverseRef(Node root, int k){
+        if(null == root)
+            return root;
+        Node current = root;
+        Node next = null;
+        Node prev = null;
+        Node head = null;
+        int index = 0;
+        while(null != current && index< k){
+            next = current.next;
+            current.next = prev;
+            if(null == head)
+                head = current;
+            prev = current;
+            current = next;
+            index ++;
+        }
+        if(null != head)
+           head.next = current;
+        return prev;
+    }
+    
     public Node reverse(Node node, int size) {
 
         /*Node reverse = null;
@@ -90,7 +115,7 @@ public class ReverseLinkList {
         ReverseLinkList r = new ReverseLinkList();
         System.out.println("Input:- ");
         r.printList(node);
-        Node reverse = r.reverse(node, 8);
+        Node reverse = r.reverseRef(node, 3);
         System.out.println("Output:- ");
         r.printList(reverse);
         System.out.println("Reverse Output:- ");
