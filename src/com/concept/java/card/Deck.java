@@ -25,7 +25,7 @@ public class Deck {
     }
 
     public Deck(boolean includeJoker){
-         this(NUMBER_OF_JOKER);
+        this(includeJoker?NUMBER_OF_JOKER: 0);
     }
 
     public Deck(int noOfJoker){
