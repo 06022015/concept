@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.concept.java.design.carparking.model</OriginalElement>
+  <nodes>
+    <node x="537.9895833333333" y="163.0">com.concept.java.design.carparking.model.VehicleType</node>
+    <node x="95.41145833333331" y="799.0">com.concept.java.design.carparking.model.Gate</node>
+    <node x="323.4794308373376" y="598.3641217298451">com.concept.java.design.carparking.model.ParkingGateSlotMatrix</node>
+    <node x="-123.07065592187223" y="802.1260010678056">com.concept.java.design.carparking.model.GateType</node>
+    <node x="675.2907962938245" y="317.815269620929">com.concept.java.design.carparking.model.ParkingRate</node>
+    <node x="562.9114583333333" y="510.0">com.concept.java.design.carparking.model.ParkingTransaction</node>
+    <node x="5.25" y="142.0">com.concept.java.design.carparking.model.ParkingBlock</node>
+    <node x="287.4114583333333" y="305.0">com.concept.java.design.carparking.model.ParkingSlot</node>
+    <node x="296.4581748309306" y="8.184730379070999">com.concept.java.design.carparking.model.Operation</node>
+    <node x="38.411458333333314" y="520.5">com.concept.java.design.carparking.model.ParkingFloor</node>
+    <node x="0.0" y="0.0">com.concept.java.design.carparking.model.ParkingLot</node>
+    <node x="290.4114583333333" y="142.0">com.concept.java.design.carparking.model.SlotStatus</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.concept.java.design.carparking.model.ParkingLot" target="com.concept.java.design.carparking.model.ParkingBlock">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.Gate" target="com.concept.java.design.carparking.model.ParkingFloor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingFloor" target="com.concept.java.design.carparking.model.Gate">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingSlot" target="com.concept.java.design.carparking.model.ParkingFloor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingRate" target="com.concept.java.design.carparking.model.VehicleType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingTransaction" target="com.concept.java.design.carparking.model.VehicleType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingFloor" target="com.concept.java.design.carparking.model.ParkingBlock">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingBlock" target="com.concept.java.design.carparking.model.ParkingFloor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingFloor" target="com.concept.java.design.carparking.model.ParkingSlot">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingSlot" target="com.concept.java.design.carparking.model.SlotStatus">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingGateSlotMatrix" target="com.concept.java.design.carparking.model.ParkingSlot">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.Gate" target="com.concept.java.design.carparking.model.GateType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingSlot" target="com.concept.java.design.carparking.model.ParkingBlock">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingBlock" target="com.concept.java.design.carparking.model.ParkingLot">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingTransaction" target="com.concept.java.design.carparking.model.ParkingSlot">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingSlot" target="com.concept.java.design.carparking.model.VehicleType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.concept.java.design.carparking.model.ParkingGateSlotMatrix" target="com.concept.java.design.carparking.model.Gate">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8552511415525114" x="184.2076882007475" y="597.4511478910838" />
+  <SelectedNodes>
+    <node>com.concept.java.design.carparking.model.ParkingGateSlotMatrix</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
