@@ -1,4 +1,4 @@
-package com.concept.java.solution;
+package com.concept.java.arrays;
 
 import com.concept.java.Base;
 
