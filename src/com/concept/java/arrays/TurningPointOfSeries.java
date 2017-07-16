@@ -1,4 +1,4 @@
-package com.concept.java.solution;
+package com.concept.java.arrays;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,7 +18,10 @@ package com.concept.java.solution;
 
 public class TurningPointOfSeries {
     
-    
+
+    /*
+    * Time complexity O(n).
+    * */
     public Integer turningPoint(int inputs[]){
         for(int i =0; i< inputs.length;i++){
             if(i>0 && inputs[i]<inputs[i-1]){
@@ -26,6 +29,23 @@ public class TurningPointOfSeries {
             }
         }
         return inputs[inputs.length-1];
+    }
+
+    /*
+    * Time Complexity O(logn).
+    * */
+    public Integer turningPoint(int inputs[], int start, int end){
+        if(inputs[start]> inputs[start+1])
+            return inputs[start];
+        if(inputs[end]> inputs[end-1])
+            return inputs[end];
+        int mid = start+(end-start)/2;
+        if(inputs[mid]>inputs[mid-1]){
+            start = mid;
+        }else{
+            end = mid;
+        }
+        return  turningPoint(inputs, start, end);
     }
 
     public static void main(String args[]){
@@ -40,6 +60,14 @@ public class TurningPointOfSeries {
         System.out.println("Turning Point 4:- "+ turningPointOfSeries.turningPoint(input4));
         int input5[] = {120, 100, 80, 20, 0};
         System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input5));
+
+        System.out.println("\n\n");
+
+        System.out.println("Turning Point 1:- "+ turningPointOfSeries.turningPoint(input1,0, input1.length-1));
+        System.out.println("Turning Point 2:- "+ turningPointOfSeries.turningPoint(input2, 0, input2.length-1));
+        System.out.println("Turning Point 3:- "+ turningPointOfSeries.turningPoint(input3, 0, input3.length-1));
+        System.out.println("Turning Point 4:- "+ turningPointOfSeries.turningPoint(input4, 0, input4.length-1));
+        System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input5, 0, input5.length-1));
     }
     
 }
