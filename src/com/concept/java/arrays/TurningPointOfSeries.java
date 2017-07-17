@@ -23,6 +23,8 @@ public class TurningPointOfSeries {
     * Time complexity O(n).
     * */
     public Integer turningPoint(int inputs[]){
+        if(null == inputs || inputs.length==0)
+            return null;
         for(int i =0; i< inputs.length;i++){
             if(i>0 && inputs[i]<inputs[i-1]){
                 return inputs[i-1];
@@ -35,7 +37,11 @@ public class TurningPointOfSeries {
     * Time Complexity O(logn).
     * */
     public Integer turningPoint(int inputs[], int start, int end){
-        if(inputs[start]> inputs[start+1])
+        if(null == inputs || inputs.length==0)
+            return null;
+        if(inputs.length==1)
+            return inputs[start];
+        if( inputs[start]> inputs[start+1])
             return inputs[start];
         if(inputs[end]> inputs[end-1])
             return inputs[end];
@@ -60,6 +66,10 @@ public class TurningPointOfSeries {
         System.out.println("Turning Point 4:- "+ turningPointOfSeries.turningPoint(input4));
         int input5[] = {120, 100, 80, 20, 0};
         System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input5));
+        int input6[] = {120};
+        System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input6));
+        int input7[] = {};
+        System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input7));
 
         System.out.println("\n\n");
 
@@ -68,6 +78,8 @@ public class TurningPointOfSeries {
         System.out.println("Turning Point 3:- "+ turningPointOfSeries.turningPoint(input3, 0, input3.length-1));
         System.out.println("Turning Point 4:- "+ turningPointOfSeries.turningPoint(input4, 0, input4.length-1));
         System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input5, 0, input5.length-1));
+        System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input6, 0, input5.length-1));
+        System.out.println("Turning Point 5:- "+ turningPointOfSeries.turningPoint(input7, 0, input5.length-1));
     }
     
 }
