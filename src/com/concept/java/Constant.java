@@ -1,5 +1,9 @@
 package com.concept.java;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -8,4 +12,73 @@ package com.concept.java;
  * To change this template use File | Settings | File Templates.
  */
 public class Constant {
+
+
+   public void temp(String dates[]){
+       String PROVDE_DATE_FORMAT = "dd-MMM-yyyy";
+       String EXPECTED_DATE_FORMAT = "YYYY-MM-dd";
+       String formated[] = new String[dates.length];
+       int i=0;
+       for(String date : dates){
+           date = date.replace(" ", "-");
+           date = date.replace("st","");
+           date = date.replace("nd","");
+           date = date.replace("th","");
+
+           SimpleDateFormat inputFormat = new SimpleDateFormat(PROVDE_DATE_FORMAT);
+           try {
+               Date dt = inputFormat.parse(date);
+               SimpleDateFormat outputFormat = new SimpleDateFormat(EXPECTED_DATE_FORMAT);
+               date = outputFormat.format(dt);
+               formated[i] = date;
+               i++;
+           } catch (ParseException e) {
+              e.printStackTrace();
+           }
+            System.out.println(date);
+
+       }
+
+   }
+    
+    public void temp1(String dates[]){
+        String PROVDE_DATE_FORMAT = "dd-MMM-yyyy";
+        String EXPECTED_DATE_FORMAT = "yyyy-MM-dd";
+        String formated[] = new String[dates.length];
+        int i=0;
+        for(String date : dates){
+            date = date.replace(" ", "-");
+            date = date.replace("st","");
+            date = date.replace("nd","");
+            date = date.replace("th","");
+
+            SimpleDateFormat inputFormat = new SimpleDateFormat(PROVDE_DATE_FORMAT);
+            try {
+                Date dt = inputFormat.parse(date);
+                SimpleDateFormat outputFormat = new SimpleDateFormat(EXPECTED_DATE_FORMAT);
+                date = outputFormat.format(dt);
+
+            } catch (ParseException e) {
+
+            }
+            formated[i] = date;
+            i++;
+            System.out.println(date);
+
+        }
+    }
+   
+    
+    public static void main(String args[]){
+        Constant c = new Constant();
+        String dates[] = {"20th Oct 2052"};
+        c.temp1(dates);
+
+
+
+
+    }
+    
+    
+
 }

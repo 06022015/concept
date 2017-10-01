@@ -1,5 +1,7 @@
 package com.concept.java;
 
+import com.concept.java.sorting.TestSorting;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ashqures
@@ -7,7 +9,7 @@ package com.concept.java;
  * Time: 11:46 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Base {
+public abstract class Base {
 
    public int a =8;
 
@@ -119,5 +121,7 @@ public class Base {
         input[i] = input[j];
         input[j] = temp;
     }
+    
+
 
 }

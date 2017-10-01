@@ -1,4 +1,4 @@
-package com.concept.java.arrays;
+package com.concept.java.solution;
 
 /**
  * Created by IntelliJ IDEA.
@@ -49,7 +49,7 @@ public class FindLongest1 {
     
     public static void main(String args[]){
         FindLongest1 findLongest1 = new FindLongest1();
-        //int input[] = {0,1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1};
+        ////int input[] = {0,1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1};
         int input[] = {0};
         System.out.println("The index of zero to replaced "+findLongest1.maxOneIndex(input)+" for longest one sequence");
     }
