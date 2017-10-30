@@ -99,5 +99,10 @@ public class LongestPalindrome extends Base {
         System.out.println(longestPalindromeBruteForce("aabaaaabaa"));
         System.out.println(longestPalindromeBruteForce("aabafabaa"));
         System.out.println(longestPalindromeBruteForce("aabafabaaq"));
+
+
+        System.out.println(longestPalindrome("acbaaabca"));
+        System.out.println(longestPalindrome("acbaaabde"));
+        System.out.println(longestPalindrome("acbaabde"));
     }
 }
