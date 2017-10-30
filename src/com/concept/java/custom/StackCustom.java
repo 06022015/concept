@@ -1,4 +1,4 @@
-package com.concept.java.stack;
+package com.concept.java.custom;
 
 /**
  * Created by IntelliJ IDEA.
@@ -7,7 +7,7 @@ package com.concept.java.stack;
  * Time: 4:38 PM
  * To change this template use File | Settings | File Templates.
  */
-public class StackCustom<T> implements Stack<T>{
+public class StackCustom<T> implements Stack<T> {
     
     private static int INITIAL_SIZE = 10;
     public int size=0;

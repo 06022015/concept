@@ -1,4 +1,4 @@
-package com.concept.java.stack;
+package com.concept.java.custom;
 
 /**
  * Created by IntelliJ IDEA.
