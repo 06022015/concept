@@ -3,7 +3,7 @@ package com.concept.java.temp;
 import com.concept.java.Base;
 
 import java.util.HashSet;
-import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
@@ -77,7 +77,7 @@ public class Temp extends Base {
             System.out.println("After");
         }
 
-        public static void main(String[] args){
+        public static void main3(String[] args){
             Set shortSet = new HashSet();
             /*for(short i = 0; i < 100; i++){
                 shortSet.add(i);
@@ -248,7 +248,64 @@ public class Temp extends Base {
         }
     }
 
-    
+
+
+
+
+    public static long getGCD(long a, long b){
+        while(b>0){
+            long temp = b;
+            b = a%b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static long getLCM(long a, long b){
+        long gcd = getGCD(a,b);
+        System.out.println("GCD:- "+ gcd);
+        long lcm = (a*b)/gcd;
+        System.out.println("LCM:- "+ lcm);
+        return lcm;
+    }
+
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+        s.nextLine();
+        for (int i = 0; i < N; i++) {
+            int noOfF = s.nextInt();
+            s.nextLine();
+            long result = 1;
+            for(int j = 0; j< noOfF; j++){
+                long input = s.nextLong();
+                result = getLCM(result, input);
+            }
+            /*BigInteger m = new BigInteger("1000000007");
+            BigInteger lcm =  BigInteger.valueOf(result);
+            System.out.println(lcm.mod(m));*/
+            System.out.println(result);
+        }
+        /*Scanner scn = new Scanner(System.in);
+		int testCases = scn.nextInt();
+
+		for (int i = 0; i < testCases; i++) {
+			int arraySize = scn.nextInt();
+			BigInteger lcm = new BigInteger("1");
+			BigInteger m = new BigInteger("1000000007");
+
+			for (int j = 0; j < arraySize; j++) {
+				BigInteger input = scn.nextBigInteger();
+
+				BigInteger gcd = lcm.gcd(input);
+
+				lcm = lcm.multiply(input).divide(gcd);
+			}
+
+			//System.out.println(lcm.mod(m));
+			System.out.println(lcm);*
+		}*/
+    }
     
 
 }

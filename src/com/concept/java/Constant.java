@@ -70,13 +70,21 @@ public class Constant {
    
     
     public static void main(String args[]){
-        Constant c = new Constant();
-        String dates[] = {"20th Oct 2052"};
-        c.temp1(dates);
-
-
-
-
+        /*public static void main(String[] args) {
+            Scanner scn = new Scanner(System.in);
+            int testCases = scn.nextInt();
+            for (int i = 0; i < testCases; i++) {
+                int arraySize = scn.nextInt();
+                BigInteger lcm = new BigInteger("1");
+                BigInteger m = new BigInteger("1000000007");
+                for (int j = 0; j < arraySize; j++) {
+                    BigInteger input = scn.nextBigInteger();
+                    BigInteger gcd = lcm.gcd(input);
+                    lcm = lcm.multiply(input).divide(gcd);
+                }
+                System.out.println(lcm.mod(m));
+            }
+        }*/
     }
     
     

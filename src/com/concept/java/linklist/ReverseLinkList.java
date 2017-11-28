@@ -120,8 +120,62 @@ public class ReverseLinkList {
         r.printList(reverse);
         System.out.println("Reverse Output:- ");
         r.printList(r.reverseLinkList(node));
+
+        Node doubly = new Node(8);
+        for(int i=7;i>=1;i--){
+            Node temp = new Node(i);
+            temp.next = doubly;
+            doubly.prev = temp;
+            doubly = temp;
+        }
+        r.printList(revers(doubly));
+        Node node1 = new Node(8);
+        for(int i=7;i>=1;i--){
+            Node temp = new Node(i);
+            temp.next = node1;
+            node1 = temp;
+        }
+        r.printList(middleAsHead(node1));
     }
 
+    public static Node revers(Node root){
+        Node head = null;
+        Node temp = null;
+        Node curr = root;
+        while(null != curr){
+            temp = curr.prev;
+            curr.prev = curr.next;
+            curr.next = temp;
+            curr = curr.prev;
+        }
+        if(null != temp)
+            head = temp.prev;
+        return head;
+    }
+    
+    public static Node middleAsHead(Node root){
+        Node tail =null;
+        Node head = null;
+        Node curr1 = root;
+        Node curr2 = root;
+        while(null != curr2){
+            curr2 = curr2.next;
+            if(null != curr2){
+                Node temp = curr1;
+                curr1 = curr1.next;
+                curr2 = curr2.next;
+                temp.next = head;
+                head = temp;
+                if(null == tail)
+                    tail = temp;
+            }
+
+        }
+
+        if(null != tail)
+            tail.next = curr1;
+        return head;
+    }
 
      static class Node {
         public Integer value;
