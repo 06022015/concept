@@ -10,6 +10,9 @@ package com.concept.java.tree;
 
 import com.concept.java.Base;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+
 /**
  * Print all nodes at distance k from a given node
  * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node. No parent pointers are available.
@@ -69,5 +72,13 @@ public class NodeAtDistanceK extends Base {
         Node target = root.left;
         NodeAtDistanceK nodeAtDistanceK = new NodeAtDistanceK();
         nodeAtDistanceK.printDistanceNode(root, target, 2);
+        Callable<Void> callable = new Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                return null;
+            }
+        };
+        FutureTask<Void> a  = new FutureTask<Void>(callable);
+        a.run();
     }
 }

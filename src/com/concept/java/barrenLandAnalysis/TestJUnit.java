@@ -1,10 +1,12 @@
 package com.concept.java.barrenLandAnalysis;
 
+/*
 import org.junit.Test;
 
 import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
+*/
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,8 +19,8 @@ public class TestJUnit {
 
     BarrenLand test;
 
-    @Test
-    public void testZero() {
+    /*@Test*/
+    /*public void testZero() {
 
         test = new BarrenLand();
         String result = ("240000");
@@ -63,7 +65,7 @@ public class TestJUnit {
         test.printOutput();
 
         assertEquals(result,test.printOutput());
-    }
+    }*/
 
     /*@Test
     public void testSTDIN() throws IOException {

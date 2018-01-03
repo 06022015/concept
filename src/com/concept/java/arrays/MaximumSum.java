@@ -34,14 +34,17 @@ public class MaximumSum {
     public static void main(String args[]){
         /*int input1[] = {5,5,10,100,10,5};
         System.out.println(findMaxSum(input1));
-        int input2[] = {1,2,3};
-        System.out.println(findMaxSum(input2));
+
         int input3[] = {1,20,3};
         System.out.println(findMaxSum(input3));
         int input4[] = {3, 2, -1, 2, 10, 10};
         System.out.println(findMaxSum(input4));*/
         int input5[] = {-3,-6,-1,-10};
         System.out.println(findMaxSum2(input5));
+        int input2[] = {1,2,3};
+        System.out.println(findMaxSum2(input2));
+        int input3[] = {-1,-2,-3,-4};
+        System.out.println(findMaxSum2(input3));
 
     }
 }

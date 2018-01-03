@@ -101,6 +101,7 @@ public class BinaryTreeZigZag extends Base {
     public static void main(String args[]) {
         BinaryTreeZigZag zigZag = new BinaryTreeZigZag();
         Node root = zigZag.getBinaryTree();
+        System.out.println(zigZag.getHeight(root));
         zigZag.printTree(root);
         System.out.println();
         zigZag.printSpiral(root);

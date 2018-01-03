@@ -25,7 +25,7 @@ public class MinNumOfJumps {
             maxReach = Math.max(maxReach, i + input[i]);
             step--;
             if (step == 0) {
-                System.out.println(input[i]);
+                System.out.println(maxReach);
                 jump++;
                 if (i >= maxReach)
                     return -1;
@@ -36,7 +36,7 @@ public class MinNumOfJumps {
     }
 
     public static void main(String args[]) {
-        int input[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+        int input[] = {1, 3, 4, 3, 1, 2, 6, 7, 6, 8, 9};
         System.out.println(findMinNumJumps(input));
     }
 }
