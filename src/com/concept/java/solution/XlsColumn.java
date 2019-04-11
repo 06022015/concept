@@ -11,6 +11,14 @@ import java.util.Scanner;
  */
 public class XlsColumn {
 
+    public static String printColumn(int num){
+        if(num<=0)
+            return "";
+        if(num<=26)
+            return String.valueOf((char)(num + 64));
+        return printColumn(num/26)+String.valueOf((char)(num%26 + 64));
+    }
+
     public static void printXLSColumnName(Integer num){
         String result = "";
         while(num > 0){
@@ -29,7 +37,8 @@ public class XlsColumn {
         scan.nextLine();
         for(int i=0; i< inSize; i++){
             Integer num = scan.nextInt();
-            printXLSColumnName(num);
+            //printXLSColumnName(num);
+            System.out.println(printColumn(num));
             scan.nextLine();
         }
     }

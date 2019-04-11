@@ -39,7 +39,7 @@ public class ReverseLinkList {
             index ++;
         }
         if(null != head)
-           head.next = current;
+           head.next = reverseRef(current,k);
         return prev;
     }
     

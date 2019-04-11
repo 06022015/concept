@@ -20,8 +20,8 @@ public class TestSorting {
 
 
 
-    public static void main1(String args[])  {
-
+    public static void main(String args[])  {
+        System.out.println((1.0/0.0));
         int bubble[] = {8, 4, 10, 6, 9, 2};
         System.out.println("Bubble sort test");
         Sort bubbleSort = new BubbleSort();
@@ -180,7 +180,7 @@ public class TestSorting {
         
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main1(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = br.readLine();

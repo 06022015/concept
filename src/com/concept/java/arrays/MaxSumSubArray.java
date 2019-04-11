@@ -29,6 +29,35 @@ public class MaxSumSubArray {
         }
         return Math.max(max,sum);
     }
+//int input10[] = {1,-3,2,1,-1};
+    public static void maximumSumSubArray1(int input[]){
+        int i1=0,i2=0,j1=0,j2=0;int sum1=input[0],sum2 = input[0];
+        for(int k=1;k< input.length;k++){
+            if(input[k-1]>=0 ){
+                if(sum1+input[k] >= sum1){
+                    sum1 = sum1+input[k];
+                    j1=k;
+                }
+            }else {
+                if(sum1 <sum2 || (sum1 == sum2 && (j1-i1)<(j2-i2))){
+                    i1=k;
+                    j1=k;
+                    sum1 = input[k];
+                }else{
+                    i2=i1;
+                    j2=j1;
+                    sum2 = sum1;
+                    i1=k;
+                    j1=k;
+                    sum1 = input[k];
+                }
+            }
+        }
+        if(sum1> sum2 || (sum1 == sum2 && ((j1-i1)>(j2-i2)) || ((j1-i1)==(j2-i2) && i1<i2))){
+            System.out.println("Sum:-"+sum1+" Start Index:-"+i1+" End Index:-"+j1);
+        }else
+            System.out.println("Sum:-"+sum2+" Start Index:-"+i2+" End Index:-"+j2);
+    }
     
     public static void main(String args[]){
         int input[]  = {5,3,9,2,7,6,4};
@@ -55,6 +84,9 @@ public class MaxSumSubArray {
         }
         System.out.println(findMaxSumSubArray(input8));
         System.out.println(sum);
+
+        int input10[] = {1,3,-3,2,1,1,-1};
+        maximumSumSubArray1(input10);
     }
     
 }
